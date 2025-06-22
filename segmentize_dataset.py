@@ -37,13 +37,6 @@ for image_name in IMAGES:
 
     image_bgr = cv2.imread(EXAMPLE_IMAGE_PATH)
     image_rgb = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2RGB)
-
-    # initiate annotator
-    # box_annotator = sv.BoxAnnotator(color=sv.Color.RED, color_lookup=sv.ColorLookup.INDEX)
-    # mask_annotator = sv.MaskAnnotator(color=sv.Color.WHITE, color_lookup=sv.ColorLookup.INDEX)
-
-    # annotated_ground_truth = box_annotator.annotate(scene=image_bgr.copy(), detections=ground_truth)
-
     mask_predictor.set_image(image=image_rgb)
 
     # prepare output mask
@@ -69,15 +62,3 @@ for image_name in IMAGES:
     os.makedirs(os.path.dirname(mask_save_path), exist_ok=True)
     cv2.imwrite(mask_save_path, final_mask * 127)
     print(f"Processed {image_name} and saved mask to {mask_save_path}")
-
-# [masks, scores, logits] = mask_predictor.predict(box=ground_truth.xyxy[1], multimask_output=True)
-# masks = masks.astype(np.bool_)
-# detections = sv.Detections(xyxy=sv.mask_to_xyxy(masks=masks), mask=masks, confidence=scores)
-
-# annotated_image = mask_annotator.annotate(scene=image_bgr.copy(), detections=detections)
-
-# sv.plot_images_grid(
-#     images = [annotated_ground_truth, annotated_image],
-#     grid_size= (1, 2),
-#     titles = ["Source", "Segmented Image"]
-# )
