@@ -14,3 +14,8 @@ Still tuning, but already getting pretty solid results. Introduced data augmenta
 | F1 Score       |   -    |   -    | 0.8428 |
 | mAP@50         |   -    |   -    | 0.8362 |
 | Dataset IoU    | 0.8920 | 0.8198 | 0.8559 |
+
+![image](https://github.com/user-attachments/assets/35f4b8cc-5744-4e2a-a67e-5593ddf40ae2)
+![image](https://github.com/user-attachments/assets/50979033-66ac-4e85-8cb1-ca6d8ef83e54)
+![image](https://github.com/user-attachments/assets/786e4eed-5fd3-4b2c-96ac-8fc434fc3030)
+![image](https://github.com/user-attachments/assets/67fa754d-66cc-4fa1-b8b1-0b3adc9a9419)
